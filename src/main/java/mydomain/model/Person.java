@@ -1,28 +1,29 @@
 package mydomain.model;
 
-import javax.jdo.annotations.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
 
-@PersistenceCapable(detachable="true")
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
+
+@PersistenceCapable(detachable = "true")
 public class Person
 {
     @PrimaryKey
-    Long id;
+    String id;
 
     String name;
 
-    public Person(long id, String name)
+    Date birthday;
+
+    List<String> groups;
+
+    public Person(String id, String name, Date birthday, String... groups)
     {
         this.id = id;
         this.name = name;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public Long getId()
-    {
-        return id;
+        this.birthday = birthday;
+        this.groups = Arrays.asList(groups);
     }
 }

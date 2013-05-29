@@ -39,7 +39,7 @@
         <!-- Change to the datanucleus-{datastore} plugin required -->
         <dependency>
             <groupId>org.datanucleus</groupId>
-            <artifactId>datanucleus-rdbms</artifactId>
+            <artifactId>datanucleus-mongodb</artifactId>
             <version>(3.1.99, )</version>
         </dependency>
 
